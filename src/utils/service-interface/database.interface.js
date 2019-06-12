@@ -4,10 +4,10 @@ import asyncToken from './asyncTokenUtils';
 
 
 const dbService = {
-  checkIfBaseEntityAttributeValueExists: async function(baseEntity,
+  checkIfBaseEntityAttributeValueExists: async function( baseEntity,
     attributeCode,
     expectedValue,
-    valueKey = 'valueString'){
+    valueKey = 'valueString' ){
       const token = await asyncToken();
       // insert the tokens
 
@@ -73,8 +73,8 @@ const dbService = {
       console.log( resp );
     },
 
-    getBaseEntityFromLinkCodeBaseEntity:  async function(baseEntity,
-      linkCode) {
+    getBaseEntityFromLinkCodeBaseEntity:  async function( baseEntity,
+      linkCode ) {
       const token = await asyncToken();
       const resp = await axios({
         method: 'GET',
@@ -89,6 +89,6 @@ const dbService = {
       }
     }
 
-}
+};
 
 export default dbService;
