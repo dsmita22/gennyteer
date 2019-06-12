@@ -10,5 +10,6 @@ describe( 'Google', () => {
         const page = await browser.newPage();
         await page.goto( 'https://google.com' );
         await expect( page.title()).resolves.toMatch( 'Google' );
+        await browser.close();
     });
 });
