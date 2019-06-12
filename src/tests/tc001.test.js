@@ -1,5 +1,7 @@
 const puppeteer = require( 'puppeteer' );
 
+jest.setTimeout( 60000 );
+
 describe( 'Google', () => {
     it( 'should be titled "Google"', async () => {
         const args = ['--no-sandbox'];
