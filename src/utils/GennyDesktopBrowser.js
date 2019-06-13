@@ -64,7 +64,8 @@ class GennyDesktopBrowser {
     const args = ['--no-sandbox', `--window-size=${PAGE_WIDTH},${PAGE_HEIGHT}`];
     browser = await puppeteer.launch({
       args,
-      headless: false
+      headless: false,
+      slowMo:250
     });
 
     const page = await browser.newPage();
@@ -314,7 +315,7 @@ class GennyDesktopBrowser {
     const selector = `[data-testid="sidebar-item ${testId}"]`;
     await expect( this.page ).toClick( selector );
   }
-  async clickSideBarItemV2(testId){
+  async clickSideBarItemV2( testId ){
     const selector = `[data-testid="sidebar-item-${testId}"]`;
     await expect( this.page ).toClick( selector );
   }
