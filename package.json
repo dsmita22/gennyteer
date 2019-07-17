@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "cross-env NODE_ENV=LOCAL jest",
+    "test": "cross-env NODE_ENV=LOCAL jest --runInBand tc003.test.js ",
     "start": "cd dist && jest -i --verbose",
     "start-xvfb": "x11vnc -q -forever -usepw -create & npm run build && cd dist && jest -i --verbose",
     "dev": "npm run build && export $(cat .env) && cd dist && jest -i --verbose",
